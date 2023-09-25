@@ -1,0 +1,287 @@
+* {
+      -webkit-transition: all .5s;
+      -webkit-animation-name: myfading;
+      -webkit-animation-duration: 3s;
+}
+@-webkit-keyframes myfading {
+      from {
+            opacity: 0.3;
+            -webkit-transition: opacity;
+      }
+  to {
+            opacity: 0.4;
+      }
+      to {
+            opacity: 0.5;
+      }
+  to {
+            opacity: 0.7;
+      }
+  to {
+            opacity: 0.8;
+      }
+  to {
+            opacity: 1;
+      }
+}
+body{
+font-family: 'Cousine',monospace;
+  font-size: 14pt;
+  background-color: black;
+  color: white;
+  max-width: 130rem;
+  margin: 3rem;
+}
+figure{
+  display: flex;
+  align-self: flex-start;
+  top: 3rem;
+  position:sticky;
+}
+.title{
+  display: flex;
+  align-self: middle; auto;
+  verticle-align:middle; auto;
+  font-family: 'Cousine',monospace;
+  font-size: 5rem;
+  color:white;
+  margin-top:1em;
+  margin-bottom:3em; auto;
+  padding:auto;
+  margin-right:5em; auto;
+  margin-left:5em; auto
+  width: 50vw;
+  margin-left: 7.4vw;
+}
+h1,h2{
+  background-color: yellow;
+  color: black;
+}
+h1{
+  font-size: 3em;
+}
+h2{
+  font-size: 2em;
+}
+h3{
+  background-color: pink;
+  color: black;
+  font-size: 1.3em;
+}
+strong{
+  background-color: blue;
+  color: lightblue;
+}
+*em{
+  background-color: none;
+  color: white;
+}
+p{
+  color: #65fe08;
+  font-size: 0.97em;
+  font-leading: auto;
+}
+.zoo-picture-container {
+  display: square;
+  grid-template-columns: 170px 115px;
+  grid-template-rows: 176px;
+  grid-column-gap: 15px;
+  margin-bottom: 12px;
+}
+
+.zoo-picture-container p {
+  margin: 0;
+}
+
+.poster-container {
+  display: square;
+  grid-template-columns: 170px 115px;
+  grid-template-rows: 176px;
+  grid-column-gap: 15px;
+  margin-bottom: 12px;
+}
+
+.poster-container p {
+  margin: 0;
+}
+
+.concert-container {
+  display: square;
+  grid-template-columns: 170px 115px;
+  grid-template-rows: 176px;
+  grid-column-gap: 15px;
+  margin-bottom: 12px;
+}
+
+.concert-container p {
+  margin: 0;
+}
+
+section{display: flex;
+  margin-top:1em;
+  margin-bottom:3em; auto;
+  padding:0.07em; auto;
+  margin-right:5em; auto;
+  margin-left:5em; auto
+}
+
+/*https://www.w3schools.com/css/css_tooltip.asp*/
+ .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #9266CC;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125px;
+  left: 110%;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/*https://www.w3schools.com/cssref/sel_hover.asp*/
+.koala:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.poster:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.concert:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.koala {
+cursor:url(https://abs.twimg.com/emoji/v2/72x72/1f428.png) 36 36, auto;
+}
+.poster {
+cursor:url(https://abs.twimg.com/emoji/v2/72x72/1f3b6.png) 36 36, auto;
+}
+.concert {
+cursor:url(https://abs.twimg.com/emoji/v2/72x72/1f38a.png) 36 36, auto;
+}
+
+body-two {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+.glowing {
+  position: relative;
+  min-width: 700px;
+  height: 550px;
+  margin: -150px;
+  transform-origin: right;
+  animation: colorChange 5s linear infinite;
+}
+
+.glowing:nth-child(even) {
+  transform-origin: left;
+}
+
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.glowing span {
+  position: absolute;
+  top: calc(80px * var(--i));
+  left: calc(80px * var(--i));
+  bottom: calc(80px * var(--i));
+  right: calc(80px * var(--i));
+}
+
+.glowing span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.glowing span:nth-child(3n + 1)::before {
+  background: rgba(134,255,0,1);
+  box-shadow: 0 0 20px rgba(134,255,0,1),
+    0 0 40px rgba(134,255,0,1),
+    0 0 60px rgba(134,255,0,1),
+    0 0 80px rgba(134,255,0,1),
+    0 0 0 8px rgba(134,255,0,.1);
+}
+
+.glowing span:nth-child(3n + 2)::before {
+  background: rgba(255,214,0,1);
+  box-shadow: 0 0 20px rgba(255,214,0,1),
+    0 0 40px rgba(255,214,0,1),
+    0 0 60px rgba(255,214,0,1),
+    0 0 80px rgba(255,214,0,1),
+    0 0 0 8px rgba(255,214,0,.1);
+}
+
+.glowing span:nth-child(3n + 3)::before {
+  background: rgba(0,226,255,1);
+  box-shadow: 0 0 20px rgba(0,226,255,1),
+    0 0 40px rgba(0,226,255,1),
+    0 0 60px rgba(0,226,255,1),
+    0 0 80px rgba(0,226,255,1),
+    0 0 0 8px rgba(0,226,255,.1);
+}
+
+.glowing span:nth-child(3n + 1) {
+  animation: animate 10s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 2) {
+  animation: animate-reverse 3s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 3) {
+  animation: animate 8s alternate infinite; 
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  100% {
+    transform: rotate(0deg);
+  }
+}
